@@ -1,4 +1,3 @@
-// search-box.component.ts
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
 import { Subject, debounceTime } from 'rxjs';
 
@@ -18,7 +17,7 @@ export class SearchBoxComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.debouncer
       .pipe(
-        debounceTime(800) // 300ms delay between keystrokes
+        debounceTime(600) // 600ms delay between keystrokes
       )
       .subscribe((value) => {
         if (value.length >= 3) {
