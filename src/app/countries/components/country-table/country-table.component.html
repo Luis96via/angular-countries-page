@@ -23,7 +23,8 @@
           {{ country.flag }}
         </td>
         <td>
-          <img [src]="country.flags.svg" [alt]="country.name.common">
+        <img [src]="country.flags.svg" [alt]="country.name.common" [title]="country.name.common">
+
         </td>
         <td>{{ country.name.common }}</td>
         <td>{{ country.capital }}</td>
